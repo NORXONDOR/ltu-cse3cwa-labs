@@ -9,11 +9,14 @@ const app = express();
 app.get('/', (req, res) => {
     // Run the system 'fortune' command and respond with the message
     child_process.exec('fortune', (error, message) => {
+        let full_message = '';
         if(error === null) {
-            res.send(message);
+            full_message += message;
         } else {
-            res.send('Error: ' + error);
+            full_message += error;
         }
+        full_message += '<br>' + Date()
+        res.send(full_message)
     })
 });
 
