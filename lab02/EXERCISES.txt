@@ -1,0 +1,8 @@
+Exercise 1:
+  container name is auto-generated
+  you can remove containers by ID
+
+Exercise 2:
+  3 different IPs for amazon.com
+  probably because there is high traffic on amazon.com and requests need to be balanced across multiple servers
+  to allow many concurrent connections?
